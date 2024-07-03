@@ -18,10 +18,10 @@ print("  3.-  Salir del Programa   ");
 print("=================================");
 print("");
 Opc = None  # Inicializamos Opc con None para asegurar que entre al bucle la primera vez
-while Opc not in [1, 2]:  # Mientras Opc no sea 1 o 2, repetir la solicitud
+while Opc not in [1, 2, 3]:  # Mientras Opc no sea 1 o 2, repetir la solicitud
     try:
         Opc = int(input("Ingrese opción (1-2): ").strip())  # Pedimos la opción y la convertimos a entero
-        if Opc not in [1, 2]:  # Si la opción no está en el rango deseado, mostrar mensaje de error
+        if Opc not in [1, 2, 3]:  # Si la opción no está en el rango deseado, mostrar mensaje de error
             print("Por favor ingrese una opción válida (1-2)")
     except ValueError:  # Si no se puede convertir a entero, mostrar mensaje de error
         print("Por favor ingrese una opción válida (1-2)")
