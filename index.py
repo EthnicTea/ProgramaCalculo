@@ -38,8 +38,8 @@ while True:
                 if Valor1 == "":  # Si el usuario deja el campo en blanco
                     raise ValueError("No ha ingresado ningún valor");
                 x = float(Valor1)  # Intentamos convertir el valor a un número flotante
-                while x < 0 or x == 0:
-                    Valor1 = input("¡¡¡No ingrese valores negativos!!!: ").strip()
+                while x < 0 or x == 0: # Si el usuario inserta valores negativos o 0
+                    Valor1 = input("¡¡¡No ingrese valores menjores a 0 o negativos!!!: ").strip()
                     x = float(Valor1)
                 # Si llegamos hasta aquí, hemos obtenido con éxito un número
                 break  # Salimos del bucle while porque tenemos el valor correcto
@@ -69,6 +69,7 @@ while True:
         Utilidad = (Venta-Costo);
         derivada = sp.diff(Utilidad, x)
 
+        # Solucionar la derivada para encontrar los puntos críticos
         puntos_criticos = sp.solve(derivada, x)
 
         # Evaluar la Utilidad en los puntos críticos y en los extremos del dominio (si existen)
